@@ -1,6 +1,7 @@
 package com.yehor.databasesaggregation.controller;
 
 import com.yehor.databasesaggregation.model.dto.UserDto;
+import com.yehor.databasesaggregation.model.request.RequestUser;
 import com.yehor.databasesaggregation.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public List<UserDto> getAllUsers(){
-        return userService.getAll();
+    public List<UserDto> findUsers(RequestUser requestUser) {
+        return userService.getAll(requestUser);
     }
 }
