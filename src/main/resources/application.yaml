@@ -1,9 +1,11 @@
 spring:
   datasource:
+  - name: datasource1
     url: jdbc:mysql://localhost:3306/mydatabase
     username: myuser
     password: secret
-#Another database to use:
-#    url: jdbc:postgresql://localhost:5432/postgres
-#    username: myuser
-#    password: secret
+  - name: datasource2
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: myuser
+    password: secret
+
